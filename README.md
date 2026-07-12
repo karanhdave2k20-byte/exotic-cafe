@@ -1,14 +1,13 @@
 # Exotic Café - Management System
 
-A premium, real-time café management application built with React, Node.js, and Supabase.
+A premium, real-time café management application built with React, Node.js, and MongoDB.
 
 ## 🚀 Quick Start
 
-1. **Prerequisites**: Ensure you have Node.js installed.
-2. **Setup Supabase**:
-   - Create a project on [Supabase](https://supabase.com/).
-   - Run the provided `supabase_schema.sql` script in the Supabase SQL Editor.
-   - Copy your project URL and Anon Key into the `.env` file.
+1. **Prerequisites**: Ensure you have Node.js and MongoDB installed.
+2. **Setup Database**:
+   - Create a local MongoDB database or use MongoDB Atlas.
+   - Put your connection URI under `MONGODB_URI` in the `.env` file.
 3. **Setup Backend**:
    - `cd server`
    - `npm install`
@@ -38,7 +37,7 @@ A premium, real-time café management application built with React, Node.js, and
 ## 🛠️ Tech Stack
 - **Frontend**: React.js, Lucide Icons, Recharts (Analytics).
 - **Backend**: Node.js, Express.
-- **Database**: Supabase (PostgreSQL).
+- **Database**: MongoDB.
 - **Styling**: Vanilla CSS (Custom Glassmorphism Design System).
 
 ## 👮 Admin Roles & Access
