@@ -524,7 +524,13 @@ app.post('/api/auth/verify-otp', async (req, res) => {
 
 // 🚀 CATCH-ALL FOR REACT ROUTING (SPA)
 app.get(/^.*$/, (req, res) => {
-  res.sendFile(path.join(distPath, 'index.html'));
+  const fs = require('fs');
+  const indexHtmlPath = path.join(distPath, 'index.html');
+  if (fs.existsSync(indexHtmlPath)) {
+    res.sendFile(indexHtmlPath);
+  } else {
+    res.status(200).json({ status: "ok", message: "Exotic Cafe Backend API is active" });
+  }
 });
 
 const PORT = process.env.PORT || 3001;
